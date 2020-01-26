@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  nginx-tg-proxy:
+    build: .
+    ports:
+            - "8888:80"
+    volumes:
+            - type: bind
+              source: "/home/ubuntu/tg_bot_proxy"
+              target: "/mnt"
+    restart: always
